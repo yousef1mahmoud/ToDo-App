@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "target": "ESNEXT",
+        "watch": true
+    }
+}

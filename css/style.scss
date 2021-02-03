@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$primaryColor: #181824;
+$secondryColor: #25273C;
+$hoverColor: #3e4057;
+$textColor: #bfc1d8;
+
+.root{
+    width: 100vw;
+    height: 100vh;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        width: 600px;
+        margin: 20px;
+
+        .input-Container{
+            background-color: $secondryColor;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            width: 100%;
+
+            .input-text{
+                background: none;
+                border: none;
+                outline: none;
+                width: 80%;
+                
+                color: $textColor;
+                font-family: sans-serif;
+                font-size: 25px;
+                padding: 5px 10px;
+            }
+
+            .input-btn{
+                font-size: 25px;
+                height: 100%;
+                background-color: $textColor;
+                border: none;
+                outline: none;
+                padding: 5px 15px;
+                margin-left: 10px;
+                cursor: pointer;
+                color: $secondryColor;
+                width: 20%;
+            }
+        }
+
+        .todos-container{
+            width: 100%;
+            background-color: $secondryColor;
+            padding: 10px 5px;
+            min-height: 400px;
+            max-height: 400px;
+            overflow: auto;
+
+            .todos{
+                list-style: none;
+                color: $textColor;
+                font-family: sans-serif;
+                padding: 10px;
+
+                .todo{
+                    font-size: 20px;
+                    padding: 15px 15px;
+                    margin-bottom: 10px;
+                    transition: background-color 0.3s;
+
+                    display: flex;
+                    width: 100%;
+
+                    &:hover{
+                        background-color: $hoverColor;
+                    }
+
+                    &:hover  .delete{
+                        opacity: 1;
+                    }
+
+                    .delete{
+                        cursor: pointer;
+                        transition: color 0.2s;
+                        transition: opacity 0.4s;
+                        margin-right: auto;
+                        opacity: 0;
+
+                        &:hover{
+                            color: red;
+                        }
+                    }
+                }
+
+                .todo:nth-last-of-type(1){
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
